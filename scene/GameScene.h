@@ -16,6 +16,14 @@
 /// </summary>
 class GameScene {
 
+	//スプライト
+	Sprite* sprite_ = nullptr;
+	//3Dモデル
+	Model* model_ = nullptr;
+	//ワールドトランスフォーム
+	WorldTransform worldTransform_;
+	//ビュープロジェクション
+	ViewProjection viewProjection_;
   public: // メンバ関数
 	/// <summary>
 	/// コンストクラタ
@@ -47,6 +55,9 @@ class GameScene {
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
 	DebugText* debugText_ = nullptr;
+
+	//テクスチャハンドル
+	uint32_t textureHandle_ = 0;
 
 	/// <summary>
 	/// ゲームシーン用
